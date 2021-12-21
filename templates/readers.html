@@ -1,0 +1,28 @@
+{{ define "readers"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+
+            <body>
+
+
+            <table  width="1000" style="height: 175px">
+                <thead><th>Id</th><th>Name</th><th>Birthdate</th><th>Adress</th><th>Surname</th><th>Email</th></thead>
+                {{range . }}
+                    <tr>
+                        <td style="">{{.Id}}</td>
+                        <td>{{.Name}}</td>
+                        <td>{{.Surname}}</td>
+                        <td>{{.Birthdate}}</td>
+                        <td>{{.Adress}}</td>
+                        <td>{{.Email}}</td>
+                    </tr>
+                {{end}}
+            </table>
+            </body>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}

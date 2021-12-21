@@ -1,0 +1,25 @@
+{{ define "readers_books"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+
+            <body>
+
+
+            <table  width="1000" style="height: 175px">
+                <thead><th>Surname</th><th>Book</th></thead>
+                {{range . }}
+                    <tr>
+                        <td style="">{{.Surname}}</td>
+                        <td>{{.BookName}}</td>
+
+                    </tr>
+                {{end}}
+            </table>
+            </body>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}

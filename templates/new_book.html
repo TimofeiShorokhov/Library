@@ -1,0 +1,26 @@
+{{ define "new_book"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Форма добавления новой книги</h1>
+            <form action="/save_book" method="post">
+                <input type="text" name="book_name" id="book_name" placeholder="Введите название книги"
+                       class="form-control"><br>
+                <p style="margin-left:-480px"><select name="genre">
+                        <option value="Комедия">Комедия</option>
+                        <option value="Боевик">Боевик</option>
+                        <option value="Драма">Драма</option>
+                        <option value="Приключения">Приключения</option>
+                        <option value="Ужасы">Ужасы</option>
+                    </select></p>
+                <textarea name="year" id="year" class="form-control" placeholder="Введите дату издания книги"></textarea><br>
+                <textarea name="quantity" id="quantity" class="form-control" placeholder="Введите количество экземпляров книги"></textarea><br>
+                <textarea name="book_price" id="book_price" class="form-control" placeholder="Введите стоимость книги"></textarea><br>
+                <button  class="btn btn-warning">Добавить</button>
+            </form>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}

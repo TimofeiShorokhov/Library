@@ -1,0 +1,24 @@
+{{ define "choose"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Введите название и количество книги, которую хотите взять</h1>
+            <form action="/choose_form" method="get">
+                <input type="text" name="book_name" id="book_name" placeholder="Введите книгу"
+                       class="form-control"><br>
+                <input type="text" name="quant" id="quant" placeholder="Введите количество"
+                       class="form-control"><br>
+
+                <button  class="btn btn-warning">Искать</button>
+            </form>
+
+
+            <div class="alert alert-danger">
+                <a href="/books" class="btn btn-danger">Выбрать из списка доступных</a>
+            </div>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}

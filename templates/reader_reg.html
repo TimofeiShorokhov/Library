@@ -1,0 +1,20 @@
+{{ define "reader_reg"}}
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    {{template "header"}}
+
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Вы не найдены в базе, пожалуйста, зарегистрируйтесь для продолжения</h1>
+      <form action="/save_reader" method="post">
+        <input type="text" name="name" id="name" placeholder="Введите Ваше имя"
+               class="form-control"><br>
+        <textarea name="surname" id="surname" class="form-control" placeholder="Введите Вашу фамилию"></textarea><br>
+        <textarea name="birthdate" id="birthdate" class="form-control" placeholder="Введите Вашу дату рождения"></textarea><br>
+        <textarea name="email" id="email" class="form-control" placeholder="Введите Ваш email"></textarea><br>
+        <textarea name="adress" id="adress" class="form-control" placeholder="Введите Ваш адрес"></textarea><br>
+        <button  class="btn btn-warning">Добавить</button>
+      </form>
+    </main>
+
+    {{template "footer"}}
+
+{{ end }}

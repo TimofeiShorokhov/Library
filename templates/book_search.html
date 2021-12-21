@@ -1,0 +1,19 @@
+{{ define "book_search"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Поиск книги по названию</h1>
+            <form action="/search_book" method="get">
+                <input type="text" name="book_name" id="book_name" placeholder="Введите название книги"
+                       class="form-control"><br>
+                <button  class="btn btn-warning">Искать</button>
+            </form>
+        </main>
+        <div class="alert alert-danger">
+            <a href="/books" class="btn btn-danger">Выбрать из списка доступных</a>
+        </div>
+
+        {{template "footer"}}
+
+{{ end }}

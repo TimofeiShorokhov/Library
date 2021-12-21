@@ -1,0 +1,28 @@
+{{ define "reader_with_book"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+
+            <body>
+
+            <h1>Список должников библиотеки</h1>
+            <table  width="1000" style="height: 175px">
+                <thead><th>Document_Id</th><th>Surname</th><th>Book</th><th>Date to return</th><th>Price</th></thead>
+                {{range . }}
+                    <tr>
+                        <td style="">{{.DocId}}</td>
+                        <td>{{.ReaderSurname}}</td>
+                        <td>{{.BookName}}</td>
+                        <td>{{.Date}}</td>
+                        <td>{{.Price}}</td>
+
+                    </tr>
+                {{end}}
+            </table>
+            </body>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}

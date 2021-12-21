@@ -1,0 +1,16 @@
+{{ define "refund_controller"}}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        {{template "header"}}
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Введите свою фамилию</h1>
+            <form action="/refund" method="get">
+                <input type="text" name="surname" id="surname" placeholder="Введите фамилию"
+                       class="form-control"><br>
+                <button  class="btn btn-warning">Искать</button>
+            </form>
+        </main>
+
+        {{template "footer"}}
+
+{{ end }}
